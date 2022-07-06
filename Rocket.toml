@@ -1,0 +1,24 @@
+## https://rocket.rs/v0.5-rc/guide/configuration/
+## https://docs.rs/rocket/0.5.0-rc.2/rocket/config/index.html
+
+[debug]
+address = "0.0.0.0"
+port = 8000
+workers = 4
+keep_alive = 5
+log_level = "debug"
+limits = { forms = 32768 }
+
+[live]
+address = "0.0.0.0"
+port = 9000
+workers = 8
+keep_alive = 5
+log_level = "critical"
+limits = { forms = 32768 }
+
+[global.tls]
+## if you enable tls these are needed
+certs = "/path/to/certs.pem"
+key = "/path/to/key.pem"
+
