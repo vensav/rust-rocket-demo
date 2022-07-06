@@ -18,18 +18,18 @@ A demonstration of Rocket Web framework using Rust
 # Development Run (port 8000)
 cargo new rocket-web --bin
 rustup override set stable
-cargo build
+cargo build OR
 cargo run
 
 # Production Run (port 9000)
 export ROCKET_SECRET_KEY=lnVZ0eYWiKvhVNsWmLHR2jgdMQjq69CRW2jjpK+2ChA= 
-ROCKET_PROFILE=live cargo build --release
+ROCKET_PROFILE=live cargo build --release OR
 ROCKET_PROFILE=live cargo run --release
 ```
 
 ```
 docker build . -t rocket-web:latest
-docker run -i --rm -p 8000:8000 -p 9000:9000 rocket-web:latest
+docker run -i --rm -p 8000:8000 -p 9000:9000 rocket-web:latest OR
 docker run -d -p 8000:8000 -p 9000:9000 rocket-web:latest
 ```
 
